@@ -1,8 +1,128 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: #6B4C90;
+}
+
+h2 {
+  font-family: 'Teko', sans-serif;
+  font-size: 10vmin;
+  letter-spacing: 0.8vmin;
+  margin: 3vmin auto;
+}
+
+h3 {
+  font-family: 'Teko', sans-serif;
+  font-size: 8.5vmin;
+  letter-spacing: 0.8vmin;
+  margin: 1.5vmin auto;
+}
+
+h5 {
+  font-family: 'Teko', sans-serif;
+  font-size: 5vmin;
 }
 
 a {
-  color: #00B7FF;
+  color: #6B4C90;
+  background-color: #FF8C69;
+  border: 0.4vmin solid #FF8C69;
+  border-radius: 1vmin;
+  font-weight: bolder;
+  text-decoration: none;
+  padding: 0.1vmin 0.3vmin;
+}
+
+a:hover {
+  color: #FF8C69;
+  background-color: #6B4C90;
+  cursor: pointer;
+}
+
+th {
+  font-family: 'Staatliches', cursive;
+  font-size: 4vmin;
+  text-align: left;
+  letter-spacing: 0.2vmin;
+  color: white;
+  padding-right: 6vmin;
+  padding-bottom: 2vmin;
+}
+
+td {
+  color: white;
+  padding-bottom: 1.5vmin;
+}
+
+div {
+  color: white;
+  margin: 2vmin auto;
+}
+
+label {
+  font-family: 'Staatliches', cursive;
+  font-size: 4vmin;
+  letter-spacing: 0.2vmin;
+  color: white;
+  display: block;
+  padding-bottom: 2.5vmin;
+}
+
+button {
+  height: 5vmin;
+  width: 18vmin;
+  color: #6B4C90;
+  background-color: #FF8C69;
+  border: 0.4vmin solid #FF8C69;
+  border-radius: 1vmin;
+  font-size: 2.5vmin;
+  font-weight: bolder;
+  padding: 0.2vmin 1vmin;
+  margin-top: 2vmin;
+}
+
+button:hover {
+  color: #FF8C69;
+  background-color: #6B4C90;
+  cursor: pointer;
+}
+
+.new-flight > label {
+  display: block;
+  margin: 0.5vmin;
+}
+
+.detail-label {
+  font-family: 'Staatliches', cursive;
+  font-size: 3.5vmin;
+  letter-spacing: 0.2vmin;
+}
+
+.destination-label {
+  font-size: 3.5vmin;
+}
+
+#details {
+  margin-left: 1.5vmin;
+}
+
+#add-destination {
+  color: #6B4C90;
+  background-color: #FF8C69;
+  border: 0.4vmin solid #FF8C69;
+  border-radius: 1vmin;
+  font-size: 2.5vmin;
+  font-weight: bolder;
+  padding: 0.2vmin 1vmin;
+  margin-left: 2vmin;
+}
+
+#add-destination:hover {
+  color: #FF8C69;
+  background-color: #6B4C90;
+  cursor: pointer;
 }
