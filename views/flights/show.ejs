@@ -1,15 +1,15 @@
 <%- include('../partials/header') %>
 
+<h3>FLIGHT DETAILS</h3>
 <section id="show-page">
-    <h3>FLIGHT DETAILS</h3>
     <div class="detail-label">AIRLINE: </div>
-    <div><%= flight.airline %></div>
+    <div class="detail-value"><%= flight.airline %></div>
     <div class="detail-label">AIRPORT: </div>
-    <div><%= flight.airport %></div>
+    <div class="detail-value"><%= flight.airport %></div>
     <div class="detail-label">FLIGHT NO.: </div>
-    <div><%= flight.flightNo %></div>
+    <div class="detail-value"><%= flight.flightNo %></div>
     <div class="detail-label">DEPARTS: </div>
-    <div><%= flight.departs %></div>
+    <div class="detail-value"><%= flight.departs %></div>
 </section>
 
 <br><br><h3>DESTINATIONS</h3>
@@ -32,15 +32,15 @@
   <table>
     <thead>
       <tr>
-        <th>Destination</th>
-        <th>Arrival Date/Time</th>
+        <th>DESTINATION</th>
+        <th>ARRIVAL DATE/TIME</th>
       </tr>
     </thead>
     <tbody>
       <% flight.destinations.forEach(function(d) { %>
         <tr>
-          <td><%= d.airport %></td>
-          <td><%= d.arrival %></td>
+          <td class="destination-output-label"><%= d.airport %></td>
+          <td class="destination-output-label"><%= d.arrival %></td>
         </tr>
       <% }); %>
     </tbody>
@@ -48,5 +48,15 @@
 <% } else { %>
   <h5>No Destinations Added Yet</h5>
 <% } %>
+
+<section>
+    <h3>TICKETS</h3>
+    <a href="/flights/<%= flight._id %>/tickets/new">NEW TICKET</a>
+    <ul>
+      <%- tickets.map(t => 
+        `<li>${t.seat} <small>${t.price}</small></li>`
+      )%>
+    </ul>
+</section>
 
 <%- include('../partials/footer') %>

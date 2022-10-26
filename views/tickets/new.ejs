@@ -3,17 +3,15 @@
 <div>Before adding, please ensure that the Ticket is not in the following list:</div>
 <section id="badge-container">
   <% tickets.forEach(function(t) { %>
-    <article class="badge"><%= t.name %></article>
+    <article class="badge"><%= t.seat %><%= t.price %></article>
   <% }) %>
 </section>
 
-<form id="add-ticket-form" action="/tickets" method="POST">
+<form id="add-ticket-form" action="/flights/<%= flightId %>/tickets" method="POST">
   <label>SEAT:</label>
   <input type="text" name="seat" required pattern="[A-F][1-9]\d?">
   <label>PRICE:</label>
   <input type="number" name="price">
-  <label>FLIGHT:</label>
-  <input type="number" name="flight">
   <input type="submit" value="ADD TICKET">
 </form>
 

@@ -54,6 +54,8 @@ th {
 }
 
 td {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 2.5vmin;
   color: white;
   padding-bottom: 1.5vmin;
 }
@@ -61,6 +63,7 @@ td {
 div {
   color: white;
   margin: 2vmin auto;
+  text-align: left;
 }
 
 label {
@@ -100,6 +103,11 @@ button:hover {
   font-family: 'Staatliches', cursive;
   font-size: 3.5vmin;
   letter-spacing: 0.2vmin;
+}
+
+.detail-value {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 3.5vmin;
 }
 
 .destination-label {

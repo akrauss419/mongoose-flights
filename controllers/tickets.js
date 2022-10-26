@@ -7,18 +7,18 @@ module.exports = {
 };
 
 function create(req, res) {
-    Ticket.create(req.body, function (err, ticket) {
-      res.redirect('/tickets/new');
+    req.body.flight = req.params.id;
+    Ticket.create(req.body, function(err, ticket) {
+        res.redirect(`/flights/${req.params.id}`);
     });
-  }
+}
   
-  function newTicket(req, res) {
-    Ticket.find({})
-      .sort('seat')
-      .exec(function (err, tickets) {
+function newTicket(req, res) {
+    Ticket.find({ flight: req.params.id }, function(err, tickets) {
         res.render('tickets/new', {
-          title: 'Add Ticket',
-          tickets
+                title: 'Add Ticket',
+                flightId: req.params.id,
+                tickets
         });
-      });
-  }
+    })
+}
