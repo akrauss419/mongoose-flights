@@ -25,6 +25,13 @@ h3 {
 h5 {
   font-family: 'Teko', sans-serif;
   font-size: 5vmin;
+  margin-top: 0;
+}
+
+div {
+  color: white;
+  margin: 2vmin auto;
+  text-align: left;
 }
 
 a {
@@ -48,7 +55,7 @@ th {
   font-size: 4vmin;
   text-align: left;
   letter-spacing: 0.2vmin;
-  color: white;
+  color: #FF8C69;
   padding-right: 6vmin;
   padding-bottom: 2vmin;
 }
@@ -60,17 +67,11 @@ td {
   padding-bottom: 1.5vmin;
 }
 
-div {
-  color: white;
-  margin: 2vmin auto;
-  text-align: left;
-}
-
 label {
   font-family: 'Staatliches', cursive;
   font-size: 4vmin;
   letter-spacing: 0.2vmin;
-  color: white;
+  color: #FF8C69;
   display: block;
   padding-bottom: 2.5vmin;
 }
@@ -85,7 +86,7 @@ button {
   font-size: 2.5vmin;
   font-weight: bolder;
   padding: 0.2vmin 1vmin;
-  margin-top: 2vmin;
+  margin-top: 4vmin;
 }
 
 button:hover {
@@ -94,12 +95,24 @@ button:hover {
   cursor: pointer;
 }
 
+li {
+  color: white;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 3.5vmin;
+  margin-top: 2vmin;
+}
+
 .new-flight > label {
   display: block;
   margin: 0.5vmin;
 }
 
+.flight-details {
+  display: inline-block;
+}
+
 .detail-label {
+  color: #FF8C69;
   font-family: 'Staatliches', cursive;
   font-size: 3.5vmin;
   letter-spacing: 0.2vmin;
@@ -111,7 +124,34 @@ button:hover {
 }
 
 .destination-label {
+  color: #FF8C69;
   font-size: 3.5vmin;
+}
+
+.destination-output-label {
+  color: #FF8C69;
+  font-size: 3.5vmin;
+  padding-top: 3vmin;
+}
+
+.destination-value {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 3.5vmin;
+}
+
+.new-flight {
+  display: inline;
+}
+
+.new-flight-input {
+  margin-bottom: 4vmin;
+}
+
+.badge {
+  color: white;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 2.5vmin;
+  margin-top: 1.5vmin;
 }
 
 #details {
@@ -133,4 +173,68 @@ button:hover {
   color: #FF8C69;
   background-color: #6B4C90;
   cursor: pointer;
+}
+
+#destination-selection {
+  height: 4vmin;
+  width: 10vmin;
+  margin-bottom: 4vmin;
+}
+
+#destination-time {
+  height: 4vmin;
+  width: 40vmin;
+  margin-bottom: 4vmin;
+}
+
+#ticket-label {
+  margin-top: 6vmin;
+}
+
+#new-ticket {
+  height: 5vmin;
+  width: 18vmin;
+  color: #6B4C90;
+  background-color: #FF8C69;
+  border: 0.4vmin solid #FF8C69;
+  border-radius: 1vmin;
+  font-size: 2.5vmin;
+  font-weight: bolder;
+  padding: 0.2vmin 1vmin;
+  margin-top: 2vmin;
+}
+
+#new-ticket:hover {
+  color: #FF8C69;
+  background-color: #6B4C90;
+  cursor: pointer;
+}
+
+#add-ticket-form {
+  padding-top: 4vmin;
+}
+
+#add-ticket {
+  height: 5vmin;
+  width: 18vmin;
+  color: #6B4C90;
+  background-color: #FF8C69;
+  border: 0.4vmin solid #FF8C69;
+  border-radius: 1vmin;
+  font-size: 2.5vmin;
+  font-weight: bolder;
+  padding: 0.2vmin 1vmin;
+  margin-left: 3vmin;
+}
+
+#add-ticket:hover {
+  color: #FF8C69;
+  background-color: #6B4C90;
+  cursor: pointer;
+}
+
+#ticket-disclaimer {
+  font-family: 'Teko', sans-serif;
+  font-size: 3.5vmin;
+  padding-top: 2vmin;
 }

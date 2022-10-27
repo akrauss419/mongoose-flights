@@ -1,18 +1,18 @@
 <%- include('../partials/header') %>
 
-<div>Before adding, please ensure that the Ticket is not in the following list:</div>
+<div id="ticket-disclaimer">Before adding, please ensure that the ticket is not in the following list:</div>
 <section id="badge-container">
   <% tickets.forEach(function(t) { %>
-    <article class="badge"><%= t.seat %><%= t.price %></article>
+    <article class="badge"><%= t.seat %> $<%= t.price %></article>
   <% }) %>
 </section>
 
 <form id="add-ticket-form" action="/flights/<%= flightId %>/tickets" method="POST">
   <label>SEAT:</label>
-  <input type="text" name="seat" required pattern="[A-F][1-9]\d?">
+  <input type="text" name="seat" class="new-flight-input" required pattern="[A-F][1-9]\d?">
   <label>PRICE:</label>
-  <input type="number" name="price">
-  <input type="submit" value="ADD TICKET">
+  <input type="number" name="price" class="new-flight-input">
+  <input type="submit" value="ADD TICKET" id="add-ticket">
 </form>
 
 <%- include('../partials/footer') %>

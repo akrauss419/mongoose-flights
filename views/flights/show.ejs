@@ -16,7 +16,7 @@
 <form id="add-destination-form" method="POST"
   action="/flights/<%= flight._id %>/destinations">
   <label class="destination-label">AIRPORT:</label>
-  <select name="airport">
+  <select name="airport" id="destination-selection">
     <option value="AUS">AUS</option>
     <option value="DFW" selected>DFW</option>
     <option value="DEN">DEN</option>
@@ -24,7 +24,7 @@
     <option value="SAN">SAN</option>
  </select>
   <label class="destination-label">ARRIVAL DATE/TIME:</label>
-    <input type="datetime-local" name="arrival">
+  <input type="datetime-local" name="arrival" id="destination-time">
   <input type="submit" value="ADD DESTINATION" id="add-destination">
 </form>
 
@@ -32,15 +32,15 @@
   <table>
     <thead>
       <tr>
-        <th>DESTINATION</th>
-        <th>ARRIVAL DATE/TIME</th>
+        <th class="destination-output-label">DESTINATION</th>
+        <th class="destination-output-label">ARRIVAL DATE/TIME</th>
       </tr>
     </thead>
     <tbody>
       <% flight.destinations.forEach(function(d) { %>
         <tr>
-          <td class="destination-output-label"><%= d.airport %></td>
-          <td class="destination-output-label"><%= d.arrival %></td>
+          <td class="destination-value"><%= d.airport %></td>
+          <td class="destination-value"><%= d.arrival %></td>
         </tr>
       <% }); %>
     </tbody>
@@ -50,11 +50,11 @@
 <% } %>
 
 <section>
-    <h3>TICKETS</h3>
-    <a href="/flights/<%= flight._id %>/tickets/new">NEW TICKET</a>
+    <h3 id="ticket-label">TICKETS</h3>
+    <a href="/flights/<%= flight._id %>/tickets/new" id="new-ticket">NEW TICKET</a>
     <ul>
       <%- tickets.map(t => 
-        `<li>${t.seat} <small>${t.price}</small></li>`
+        `<li>${t.seat} <small>$${t.price}</small></li>`
       )%>
     </ul>
 </section>
