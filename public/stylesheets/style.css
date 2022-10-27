@@ -76,6 +76,10 @@ label {
   padding-bottom: 2.5vmin;
 }
 
+select {
+  margin: auto;
+}
+
 button {
   height: 5vmin;
   width: 18vmin;
